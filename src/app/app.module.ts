@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { BoardCreatorComponent } from '../pages/board-creator/board-creator.component';
 
 import { BoardService } from '../services/board.service';
+import { BoardListComponent } from '../pages/board-list/board-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BoardCreatorComponent
+    BoardCreatorComponent,
+    BoardListComponent
   ],
   imports: [
     BrowserModule
