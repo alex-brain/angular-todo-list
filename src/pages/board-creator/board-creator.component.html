@@ -7,7 +7,7 @@
       <form class="form row">
         <label class="sr-only" for="inlineFormInput">Name</label>
         <input type="text" #boardTitle class="form-control col-9" id="inlineFormInput" placeholder="To do something...">
-        <button (click)="addBoard($event, boardTitle.value); boardTitle.value = ''" class="btn btn-primary col-3">Add board</button>
+        <button (click)="createBoard($event, boardTitle.value); boardTitle.value = ''" class="btn btn-primary col-3">Add board</button>
       </form>
     </div>
   </div>

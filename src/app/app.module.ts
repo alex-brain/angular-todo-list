@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BoardCreatorComponent } from '../pages/board-creator/board-creator.component';
 
+import { BoardService } from '../services/board.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,9 @@ import { BoardCreatorComponent } from '../pages/board-creator/board-creator.comp
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    BoardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

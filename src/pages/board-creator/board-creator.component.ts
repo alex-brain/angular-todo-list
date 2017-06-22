@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BoardService } from '../../services/board.service';
 
 
 @Component({
@@ -8,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardCreatorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private boardService: BoardService) { }
 
-  addBoard(e, title) {
+  createBoard(e, title) {
     e.preventDefault();
-    console.log('board', title);
+    this.boardService.createBoard(title);
   }
 
   ngOnInit() {
