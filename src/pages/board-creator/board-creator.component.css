@@ -1,0 +1,11 @@
+.board-creator {
+  margin-top: 20px;
+}
+
+.board-creator .card {
+  width: 30%;
+}
+.board-creator .card-header {
+  background: #337ab7;
+  color: #FFFFFF;
+}
