@@ -4,20 +4,24 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BoardCreatorComponent } from '../pages/board-creator/board-creator.component';
 
-import { BoardService } from '../services/board.service';
+import { BoardService } from '../services/board/board.service';
+import { TaskService } from '../services/task/task.service';
 import { BoardListComponent } from '../pages/board-list/board-list.component';
+import { TaskListComponent } from '../pages/task-list/task-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardCreatorComponent,
-    BoardListComponent
+    BoardListComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [
-    BoardService
+    BoardService,
+    TaskService
   ],
   bootstrap: [AppComponent]
 })

@@ -4,3 +4,9 @@
 .board-list .board-item{
   padding: 0;
 }
+.board-item-btn-delete {
+  display: none;
+}
+.board-item:hover .board-item-btn-delete {
+  display: block;
+}

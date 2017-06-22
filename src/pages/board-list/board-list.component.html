@@ -1,13 +1,21 @@
 <div class="board-list d-flex justify-content-center">
   <div class="board-container row">
     <div class="card board-item col-5" *ngFor="let board of boards">
-      <div class="card-header">
-        {{board.title}}
+      <div class="card-header d-flex justify-content-between">
+        <div class="board-item-title">{{board.title}}</div>
+        <div class="board-item-btn-delete">
+          <button type="button"
+                  class="btn btn-danger btn-sm"
+                  (click)="deleteBoard(board.id)"
+          >X</button>
+        </div>
       </div>
       <div class="card-block">
-        <h4 class="card-title"></h4>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <task-list [boardId]="board.id"></task-list>
+        <form class="form row">
+          <input type="text" #taskTitle class="form-control col-9" id="inlineFormInput" placeholder="To do something...">
+          <button (click)="createTask($event, taskTitle.value, board.id); taskTitle.value = '';" class="btn btn-secondary col-3">Add task</button>
+        </form>
       </div>
     </div>
   </div>

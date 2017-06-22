@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BoardService } from '../../services/board.service';
-
+import { BoardService } from '../../services/board/board.service';
+import uuidv4 from 'uuid/v4';
 
 @Component({
   selector: 'board-creator',
@@ -13,7 +13,11 @@ export class BoardCreatorComponent implements OnInit {
 
   createBoard(e, title) {
     e.preventDefault();
-    this.boardService.createBoard(title);
+    const board = {
+      id: uuidv4(),
+      title: title
+    };
+    this.boardService.createBoard(board);
   }
 
   ngOnInit() {
