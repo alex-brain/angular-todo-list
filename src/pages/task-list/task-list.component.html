@@ -1,5 +1,6 @@
 <div>
-  <div *ngFor="let task of tasks">
+  <div *ngFor="let task of myTasks">
     {{task.title}}
   </div>
+  <button (click)="getMyTasks($event)">get tasks</button>
 </div>

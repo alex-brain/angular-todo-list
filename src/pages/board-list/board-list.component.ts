@@ -26,6 +26,7 @@ export class BoardListComponent implements OnInit {
       boardId: boardId
     };
     this.taskService.createTask(task);
+    console.log('this tasks', this.taskService.getTaskListByBoardId(boardId));
   }
 
   deleteBoard(boardId) {
