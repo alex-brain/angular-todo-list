@@ -7,6 +7,10 @@
     </div>
     <div class="task-item-btn-delete">
       <button type="button"
+              class="btn btn-primary btn-sm"
+              [routerLink]="['/task-editor', task.id]"
+      >Edit</button>
+      <button type="button"
               class="btn btn-danger btn-sm"
               (click)="deleteTask(task.id)"
       >X</button>

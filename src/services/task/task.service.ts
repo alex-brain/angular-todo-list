@@ -17,6 +17,13 @@ export class TaskService {
       }
     });
   }
+  editTask(title, taskId) {
+    this.tasks.forEach((task, i) => {
+      if (task.id === taskId) {
+        this.tasks[i].title = title;
+      }
+    })
+  }
   getTaskList(): any[] {
     return this.tasks;
   }

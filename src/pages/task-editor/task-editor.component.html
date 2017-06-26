@@ -1,3 +1,13 @@
-<p>
-  task-editor works!
-</p>
+<div class="board-creator d-flex justify-content-center">
+  <div class="card">
+    <div class="card-header">
+      Edit task
+    </div>
+    <div class="card-block">
+      <form class="form row">
+        <input type="text" #taskTitle class="form-control col-8" id="inlineFormInput" placeholder="To do something...">
+        <button (click)="saveTask($event, taskTitle.value); taskTitle.value = ''" class="btn btn-primary col-4">Save task</button>
+      </form>
+    </div>
+  </div>
+</div>

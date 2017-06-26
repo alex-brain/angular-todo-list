@@ -7,7 +7,7 @@ import {TaskEditorComponent} from '../pages/task-editor/task-editor.component';
 const routes: Routes = [
   {path: '', redirectTo: 'board-list', pathMatch: 'full'},
   {path: 'board-list', component: BoardListComponent},
-  {path: 'task-editor', component: TaskEditorComponent},
+  {path: 'task-editor/:id', component: TaskEditorComponent},
 ];
 
 @NgModule({
