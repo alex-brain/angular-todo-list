@@ -32,6 +32,9 @@ export class TaskListComponent implements OnInit, OnChanges {
     });
     return activeTasks;
   }
+  saveChanges(taskId) {
+    this.taskService.saveChanges(taskId);
+  }
   ngOnInit() {
     this.getTasks();
     console.log('task id ' + this.boardId, this.tasks);
