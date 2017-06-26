@@ -9,6 +9,7 @@ import { BoardCreatorComponent } from '../pages/board-creator/board-creator.comp
 
 import { BoardService } from '../services/board/board.service';
 import { TaskService } from '../services/task/task.service';
+import { LocalStorageService } from '../services/local-storage/local-storage.service';
 import { BoardListComponent } from '../pages/board-list/board-list.component';
 import { TaskListComponent } from '../pages/task-list/task-list.component';
 import { TaskEditorComponent } from '../pages/task-editor/task-editor.component';
@@ -28,7 +29,8 @@ import { TaskEditorComponent } from '../pages/task-editor/task-editor.component'
   ],
   providers: [
     BoardService,
-    TaskService
+    TaskService,
+    LocalStorageService
   ],
   bootstrap: [AppComponent]
 })
