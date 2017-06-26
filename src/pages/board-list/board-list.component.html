@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="card-block">
-        <task-list [boardId]="board.id"></task-list>
+        <task-list [boardId]="board.id" [taskList]="tasks"></task-list>
         <form class="form row">
           <input type="text" #taskTitle class="form-control col-9" id="inlineFormInput" placeholder="To do something...">
           <button (click)="createTask($event, taskTitle.value, board.id); taskTitle.value = '';" class="btn btn-secondary col-3">Add task</button>

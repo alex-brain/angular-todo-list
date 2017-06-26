@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import {TaskService} from '../../services/task/task.service';
 
 @Component({
@@ -6,28 +6,30 @@ import {TaskService} from '../../services/task/task.service';
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css']
 })
-export class TaskListComponent implements OnInit {
+export class TaskListComponent implements OnInit, OnChanges {
   @Input() boardId;
+  @Input() taskList;
   tasks = [];
-  myTasks = [];
   constructor(private taskService: TaskService) {}
 
   getTasks() {
-    this.tasks = this.taskService.getTaskList();
+    /*this.tasks = this.taskService.getTaskListByBoardId(this.boardId);
     this.myTasks = this.tasks.filter((task, i) => {
         return true;
-    });
-    console.log('board id', this.boardId);
-    console.log('myTasks', this.myTasks);
-    console.log('tasks', this.tasks);
+    });*/
+    this.tasks = this.taskService.getTaskListByBoardId(this.boardId);
+    console.log('taskList', this.tasks);
   }
-  getMyTasks(e) {
-    e.preventDefault();
+  deleteTask(taskId) {
+    this.taskService.deleteTask(taskId);
     this.getTasks();
   }
   ngOnInit() {
     this.getTasks();
     console.log('task id ' + this.boardId, this.tasks);
+  }
+  ngOnChanges() {
+    this.getTasks();
   }
 
 }

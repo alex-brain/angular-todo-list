@@ -10,3 +10,6 @@
 .board-item:hover .board-item-btn-delete {
   display: block;
 }
+.board-item .card-header {
+  height: 52px;
+}

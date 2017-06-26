@@ -15,7 +15,7 @@ export class BoardListComponent implements OnInit {
   constructor(private boardService: BoardService,
               private taskService: TaskService) {
     this.boards = this.boardService.boards;
-    this.tasks = this.taskService.tasks;
+    // this.tasks = this.taskService.tasks;
   }
 
   createTask(e, title, boardId) {
@@ -26,7 +26,8 @@ export class BoardListComponent implements OnInit {
       boardId: boardId
     };
     this.taskService.createTask(task);
-    console.log('this tasks', this.taskService.getTaskListByBoardId(boardId));
+    this.tasks = this.taskService.getTaskListByBoardId(boardId);
+    console.log('this tasks', this.tasks);
   }
 
   deleteBoard(boardId) {
