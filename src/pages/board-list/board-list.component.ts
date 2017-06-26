@@ -23,7 +23,8 @@ export class BoardListComponent implements OnInit {
     const task = {
       id: uuidv4(),
       title: title,
-      boardId: boardId
+      boardId: boardId,
+      completed: false
     };
     this.taskService.createTask(task);
     this.tasks = this.taskService.getTaskListByBoardId(boardId);

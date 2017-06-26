@@ -1,6 +1,10 @@
 <div class="task-list">
+  <b>remaining: {{getActiveTaskListCount()}} of {{getTaskListCount()}}</b>
   <div *ngFor="let task of tasks" class="task-item d-flex justify-content-between">
-    <div class="task-item-title">{{task.title}}</div>
+    <div class="task-item-title">
+      <input type="checkbox" [(ngModel)]="task.completed" id={{task.id}}/>
+      <label for={{task.id}}>{{task.title}}</label>
+    </div>
     <div class="task-item-btn-delete">
       <button type="button"
               class="btn btn-danger btn-sm"

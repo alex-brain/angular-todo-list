@@ -1,0 +1,9 @@
+.task-item {
+  height: 27px;
+}
+.task-item .task-item-btn-delete {
+  display: none;
+}
+.task-item:hover .task-item-btn-delete {
+  display: block;
+}

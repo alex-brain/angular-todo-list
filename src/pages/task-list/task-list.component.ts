@@ -24,6 +24,18 @@ export class TaskListComponent implements OnInit, OnChanges {
     this.taskService.deleteTask(taskId);
     this.getTasks();
   }
+  getTaskListCount(): number {
+    return this.tasks.length;
+  }
+  getActiveTaskListCount(): number {
+    let activeTasks = 0;
+    this.tasks.map(task => {
+      if (!task.completed) {
+        activeTasks++;
+      }
+    });
+    return activeTasks;
+  }
   ngOnInit() {
     this.getTasks();
     console.log('task id ' + this.boardId, this.tasks);
