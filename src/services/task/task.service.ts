@@ -23,6 +23,7 @@ export class TaskService {
         this.tasks.splice(i, 1);
       }
     });
+    this.localStorageService.cacheDate('tasks', this.tasks);
   }
   editTask(title, taskId) {
     this.tasks.forEach((task, i) => {

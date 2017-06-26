@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
-import {BoardListComponent} from '../pages/board-list/board-list.component';
-import {TaskEditorComponent} from '../pages/task-editor/task-editor.component';
+import {BoardListComponent} from '../components/board-list/board-list.component';
+import {TaskEditorComponent} from '../components/task-editor/task-editor.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'board-list', pathMatch: 'full'},
