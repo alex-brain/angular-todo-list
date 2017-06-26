@@ -19,6 +19,7 @@ export class TaskEditorComponent implements OnInit {
   }
 
   saveTask(e, title) {
+    e.preventDefault();
     this.taskService.editTask(title, this.taskId);
     this.location.back();
   }

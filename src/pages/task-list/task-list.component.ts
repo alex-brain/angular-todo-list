@@ -13,10 +13,6 @@ export class TaskListComponent implements OnInit, OnChanges {
   constructor(private taskService: TaskService) {}
 
   getTasks() {
-    /*this.tasks = this.taskService.getTaskListByBoardId(this.boardId);
-    this.myTasks = this.tasks.filter((task, i) => {
-        return true;
-    });*/
     this.tasks = this.taskService.getTaskListByBoardId(this.boardId);
     console.log('taskList', this.tasks);
   }

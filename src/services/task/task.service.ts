@@ -7,7 +7,6 @@ export class TaskService {
 
   createTask(task): void {
     this.tasks.push(task);
-    // console.log('tasks', this.tasks);
   }
   deleteTask(taskId) {
     this.tasks.forEach((task, i) => {
@@ -37,14 +36,5 @@ export class TaskService {
     }
     console.log('tasks by id', myTasks);
     return myTasks;
-    /*const tasks = this.getTaskList();
-    const myTask = tasks.filter(task => task.boardId === boardId);
-  //  console.log('myTask', myTask);
-    return myTask;*/
-    /*return this.getTaskList().filter(task => {
-      if (task) {
-        return true;
-      }
-    });*/
   }
 }
